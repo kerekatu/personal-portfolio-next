@@ -43,8 +43,19 @@ const globalStyles = css`
   }
 
   a {
-    color: inherit;
+    color: currentColor;
     text-decoration: none;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  .full-layout {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: 1 / -1 !important;
   }
 `
 
