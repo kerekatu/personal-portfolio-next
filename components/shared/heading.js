@@ -1,17 +1,20 @@
 import styled from '@emotion/styled'
 
-const Heading = ({ size, children }) => {
+const Heading = ({ size, weight, children }) => {
   const validSizes = ['h1', 'h2', 'h3', 'h4', 'h5']
   const title = validSizes.includes(size) && size.toLowerCase()
 
   return (
-    <HeadingWrapper as={title} className={title}>
+    <HeadingWrapper as={title} className={title} weight={weight}>
       {children}
     </HeadingWrapper>
   )
 }
 
 const HeadingWrapper = styled.div`
+  line-height: var(--leading-heading);
+  ${(props) => props.weight && { fontWeight: props.weight + ' !important' }}
+
   &.h1 {
     font-size: 6.4rem;
     font-weight: 900;

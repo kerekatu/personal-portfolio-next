@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
 const LayoutWrapper = styled.div`
   & > div {
-    grid-template-rows: 12rem 1fr 64rem;
+    grid-template-rows: 12rem calc(100vh - 12rem) 64rem;
   }
 
   header,
@@ -33,9 +33,7 @@ const LayoutWrapper = styled.div`
   main {
     grid-row: 2 / 3;
 
-    display: grid;
     width: 100%;
-    grid-template-columns: 1fr min(80em, 100%) 1fr;
     max-width: 96rem;
     margin: 0 auto;
   }
