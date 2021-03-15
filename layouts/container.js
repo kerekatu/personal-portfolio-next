@@ -6,7 +6,7 @@ const Container = ({ children }) => {
 
 const ContainerWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr min(80em, 100%) 1fr;
+  grid-template-columns: 1fr min(100rem, 100%) 1fr;
 
   & > * {
     grid-column: 2;

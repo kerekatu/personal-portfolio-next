@@ -19,7 +19,11 @@ const Footer = () => {
             </Heading>
           </div>
 
-          <Button className="primary" size="2.4rem">
+          <Button
+            className="primary"
+            size="2.4rem"
+            link="mailto:konradtrosa@gmail.com"
+          >
             Contact me
           </Button>
         </div>
@@ -43,6 +47,9 @@ const FooterWrapper = styled.footer`
   }
 
   .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 46rem;
   }
 

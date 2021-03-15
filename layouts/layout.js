@@ -3,12 +3,12 @@ import Footer from '@/layouts/footer'
 import styled from '@emotion/styled'
 import Container from './container'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isFullscreen }) => {
   return (
     <LayoutWrapper>
       <Container>
         <Header />
-        <main>{children}</main>
+        <main className={isFullscreen && 'full-layout'}>{children}</main>
         <Footer />
       </Container>
     </LayoutWrapper>
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
 const LayoutWrapper = styled.div`
   & > div {
-    grid-template-rows: 12rem calc(100vh - 12rem) 64rem;
+    grid-template-rows: 14rem 1fr 64rem;
   }
 
   header,
@@ -32,9 +32,9 @@ const LayoutWrapper = styled.div`
 
   main {
     grid-row: 2 / 3;
-
     width: 100%;
-    max-width: 96rem;
+    max-width: 100rem;
+    min-height: calc(100vh - 14rem);
     margin: 0 auto;
   }
 

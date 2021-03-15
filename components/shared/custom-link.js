@@ -2,12 +2,15 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const CustomLink = ({ href, children }) => {
+const CustomLink = ({ href, children, ...props }) => {
   const router = useRouter()
 
   return (
     <Link href={href}>
-      <LinkWrapper className={router.pathname === href ? 'active' : undefined}>
+      <LinkWrapper
+        className={router.pathname === href ? 'active' : undefined}
+        {...props}
+      >
         {children}
       </LinkWrapper>
     </Link>
@@ -15,11 +18,12 @@ const CustomLink = ({ href, children }) => {
 }
 
 const LinkWrapper = styled.a`
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   cursor: pointer;
 
   &.active {
-    font-weight: 900;
+    font-weight: var(--font-weight-3);
+    opacity: 1;
   }
 `
 

@@ -16,28 +16,28 @@ const HeadingWrapper = styled.div`
   ${(props) => props.weight && { fontWeight: props.weight + ' !important' }}
 
   &.h1 {
-    font-size: 6.4rem;
-    font-weight: 900;
+    font-size: 9.6rem;
+    font-weight: var(--font-weight-3);
   }
 
   &.h2 {
     font-size: 4.8rem;
-    font-weight: 900;
+    font-weight: var(--font-weight-3);
   }
 
   &.h3 {
     font-size: 3.6rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-3);
   }
 
   &.h4 {
     font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-2);
   }
 
   &.h5 {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-2);
   }
 `
 

@@ -7,10 +7,13 @@ const Navbar = () => {
     <NavbarWrapper>
       <ul>
         <li>
-          <CustomLink href="/">Home</CustomLink>
+          <CustomLink href="/">Konrad Rosa</CustomLink>
         </li>
         <li>
           <CustomLink href="/projects">Projects</CustomLink>
+        </li>
+        <li>
+          <CustomLink href="/about">About</CustomLink>
         </li>
         <li>
           <Link href="mailto:konradtrosa@gmail.com">
@@ -25,11 +28,22 @@ const Navbar = () => {
 const NavbarWrapper = styled.nav`
   & > ul {
     display: flex;
-    gap: 4rem;
+    gap: 6rem;
   }
 
   a {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: var(--font-weight-2);
+    opacity: 0.8;
+    transition: opacity var(--transition);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  li {
+    position: relative;
   }
 `
 

@@ -1,11 +1,9 @@
 import Navbar from '@/components/navbar'
-import Logo from '@/components/shared/logo'
 import styled from '@emotion/styled'
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo />
       <Navbar />
     </HeaderWrapper>
   )
@@ -13,7 +11,7 @@ const Header = () => {
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
 
