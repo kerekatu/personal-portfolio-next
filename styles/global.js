@@ -7,7 +7,7 @@ const globalStyles = css`
     --color-black: #000;
     --color-gray: #f9f9f9;
     --color-gray-2: #363636;
-    --color-gray-3: #161616;
+    --color-gray-3: #2c2c2c;
     --color-gray-4: #111;
     --color-blue: #0099ff;
     --color-red: #f45847;
@@ -21,7 +21,8 @@ const globalStyles = css`
     --leading-body: 1.58;
     --leading-heading: 1.4;
 
-    --radius-small: 1.2rem;
+    --radius-small: 0.8rem;
+    --radius-large: 1.6rem;
     --radius-full: 100rem;
 
     --transition: 0.15s ease;
@@ -90,6 +91,20 @@ const globalStyles = css`
 
   strong {
     font-weight: var(--font-weight-3);
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(0.4rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
   /* * {

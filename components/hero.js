@@ -45,18 +45,15 @@ const Hero = () => {
                 padding="0 4rem"
                 link="/projects"
               >
-                See my projects
-              </Button>
-              <Button
-                size="1.8rem"
-                className="secondary"
-                padding="0 4rem"
-                link="/resume"
-              >
-                Resume
+                Download resume
               </Button>
             </div>
           </div>
+        </div>
+        <div className="scroll">
+          <i>
+            <img src="/static/icons/chevron-down.svg" alt="Arrow Down" />
+          </i>
         </div>
       </Container>
     </HeroWrapper>
@@ -72,6 +69,7 @@ const HeroWrapper = styled.section`
 
   .hero-container {
     padding: 0 4rem;
+    margin-bottom: 4rem;
 
     &[data-backdrop]::before {
       content: attr(data-backdrop);
@@ -81,16 +79,15 @@ const HeroWrapper = styled.section`
       position: absolute;
       overflow: hidden;
       word-break: none;
-      -webkit-text-stroke: var(--color-gray-2);
+      -webkit-text-stroke: var(--color-gray-3);
       -webkit-text-stroke-width: 1px;
-      top: 50%;
+      top: calc(50% - 4rem);
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 40rem;
       font-weight: var(--font-weight-3);
       z-index: -1;
       color: transparent;
-      opacity: 0.3;
       width: 100%;
       white-space: nowrap;
       animation: opacity 0.15s ease-in-out;
@@ -102,7 +99,6 @@ const HeroWrapper = styled.section`
     margin-bottom: 12rem;
 
     & > h1 {
-      position: relative;
       margin-bottom: 1rem;
     }
 
@@ -120,25 +116,22 @@ const HeroWrapper = styled.section`
     }
   }
 
-  .profiles {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+  .scroll {
+    position: relative;
 
-    a {
-      font-size: 1.8rem;
-      line-height: 1;
-      padding: 1rem;
-      border-radius: var(--radius-full);
-      font-weight: var(--font-weight-2);
-      font-size: 2.2rem;
+    & i {
+      position: absolute;
+      top: -8rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    a img {
+    & i img {
       display: block;
-      filter: invert(100%);
-      height: 2.4rem;
+      filter: invert(1);
+      opacity: 0.4;
+      height: 4rem;
+      animation: moveUpDown 1.5s infinite;
     }
   }
 `
